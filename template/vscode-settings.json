@@ -1,0 +1,81 @@
+{
+    "latex-workshop.latex.outDir": "./_build",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex only (no bib)",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.synctex.gz"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.rootFile.doNotUseTeXroot": false,
+    "latex-workshop.intellisense.package.enabled": true,
+    "[tex]": {
+        "editor.wordWrap": "on",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": false
+    },
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": false
+    },
+    "files.associations": {
+        "*.tex": "latex"
+    }
+}
